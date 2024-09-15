@@ -1,0 +1,314 @@
+[
+    {
+        "name": "Trailing Whitespace",
+        "description": "Lines should not have trailing whitespace.",
+        "regex": "[ \\t]+$",
+        "color": "#ADD8E6"
+    },
+    {
+        "name": "Line Length Exceeded",
+        "description": "Lines should not exceed 120 characters.",
+        "regex": "^.{121,}$",
+        "color": "#FFB6C1"
+    },
+    {
+        "name": "Opening Brace Spacing",
+        "description": "There should be exactly one space before an opening brace `{`.",
+        "regex": "\\S\\{",
+        "color": "#90EE90"
+    },
+    {
+        "name": "Closure Brace Spacing",
+        "description": "Exactly one space between a closure's `{` and its content.",
+        "regex": "\\{\\s{0}[^ \\n]|{\\s{2,}}",
+        "color": "#FFA07A"
+    },
+    {
+        "name": "Comma Spacing",
+        "description": "There should be a space after each comma.",
+        "regex": ",\\S",
+        "color": "#FFD700"
+    },
+    {
+        "name": "Colon Spacing",
+        "description": "No space before a colon `:`, and exactly one space after it.",
+        "regex": "\\s+:|: [^\\s]",
+        "color": "#DA70D6"
+    },
+    {
+        "name": "Trailing Semicolons",
+        "description": "Lines should not end with semicolons.",
+        "regex": ";+\\s*$",
+        "color": "#40E0D0"
+    },
+    {
+        "name": "Multiple Blank Lines",
+        "description": "Avoid multiple consecutive blank lines.",
+        "regex": "\\n{3,}",
+        "color": "#FF7F50"
+    },
+    {
+        "name": "Space Around Operators",
+        "description": "Operators should have spaces around them.",
+        "regex": "(?<=[^\\s])([+\\-*/%&|^=><]=?)(?=[^\\s])",
+        "color": "#7B68EE"
+    },
+    {
+        "name": "Tabs Instead of Spaces",
+        "description": "Use spaces instead of tabs for indentation.",
+        "regex": "\\t",
+        "color": "#A52A2A"
+    },
+    {
+        "name": "Variable Name Case",
+        "description": "Variable names should be in camelCase.",
+        "regex": "\\bvar\\s+[_A-Z]",
+        "color": "#2E8B57"
+    },
+    {
+        "name": "Constant Name Case",
+        "description": "Constant names should be in camelCase.",
+        "regex": "\\blet\\s+[_A-Z]",
+        "color": "#8B4513"
+    },
+    {
+        "name": "Type Name Case",
+        "description": "Type names should be in PascalCase.",
+        "regex": "\\b(class|struct|enum|protocol|typealias)\\s+[a-z]",
+        "color": "#4682B4"
+    },
+    {
+        "name": "Function Name Case",
+        "description": "Function names should be in camelCase.",
+        "regex": "\\bfunc\\s+[_A-Z]",
+        "color": "#D2691E"
+    },
+    {
+        "name": "Acronym Handling in Names",
+        "description": "Acronyms should be consistently cased (e.g., `URLSession` not `UrlSession`).",
+        "regex": "\\b[A-Za-z]*[A-Z]{2,}[A-Za-z]*\\b",
+        "color": "#FF69B4"
+    },
+    {
+        "name": "Force Unwrapping",
+        "description": "Avoid force unwrapping optionals.",
+        "regex": "!\\s*[\\w\\(\\[]",
+        "color": "#8A2BE2"
+    },
+    {
+        "name": "Force Casting",
+        "description": "Avoid force casting with `as!`.",
+        "regex": "\\sas!\\s",
+        "color": "#FF4500"
+    },
+    {
+        "name": "Implicitly Unwrapped Optionals",
+        "description": "Avoid using implicitly unwrapped optionals.",
+        "regex": ":\\s*[^:]*!\\b",
+        "color": "#1E90FF"
+    },
+    {
+        "name": "TODO and FIXME Comments",
+        "description": "Address all `TODO` and `FIXME` comments.",
+        "regex": "//\\s*(TODO|FIXME)[:\\s]",
+        "color": "#32CD32"
+    },
+    {
+        "name": "Semicolons in Statements",
+        "description": "Do not use semicolons to terminate statements.",
+        "regex": ";+\\s*$",
+        "color": "#FF6347"
+    },
+    {
+        "name": "Empty Enum Arguments",
+        "description": "Omit parentheses for enum cases without associated values.",
+        "regex": "case\\s+\\w+\\(\\)",
+        "color": "#6A5ACD"
+    },
+    {
+        "name": "Empty Closure Parentheses",
+        "description": "Use `{}` instead of `{}` for empty closures.",
+        "regex": "\\{\\s+\\}",
+        "color": "#FF8C00"
+    },
+    {
+        "name": "Print Statements",
+        "description": "Avoid using `print` statements in production code.",
+        "regex": "\\bprint\\s*\\(",
+        "color": "#20B2AA"
+    },
+    {
+        "name": "Use of Any and AnyObject",
+        "description": "Avoid using `Any` and `AnyObject` when a more specific type can be used.",
+        "regex": ":\\s*(Any|AnyObject)\\b",
+        "color": "#B22222"
+    },
+    {
+        "name": "Braces on Same Line",
+        "description": "Opening braces `{` should be on the same line as the declaration.",
+        "regex": "\\b(if|else|for|while|switch|func|class|struct|enum)\\b[^\\{]*\\n\\s*\\{",
+        "color": "#008080"
+    },
+    {
+        "name": "Use of self",
+        "description": "Avoid unnecessary use of `self`.",
+        "regex": "\\bself\\.",
+        "color": "#DC143C"
+    },
+    {
+        "name": "IsEmpty vs. Count",
+        "description": "Use `isEmpty` instead of `count == 0`.",
+        "regex": "\\.count\\s*==\\s*0",
+        "color": "#9400D3"
+    },
+    {
+        "name": "NS Prefixes",
+        "description": "Prefer Swift native types over `NS` prefixed types.",
+        "regex": "\\bNS[A-Z]\\w*\\b",
+        "color": "#00CED1"
+    },
+    {
+        "name": "Weak IBOutlet Properties",
+        "description": "Declare `@IBOutlet` properties as `weak` when appropriate.",
+        "regex": "@IBOutlet\\s+(var|let)\\s+[^:]+:",
+        "color": "#696969"
+    },
+    {
+        "name": "Force Try",
+        "description": "Avoid using `try!`; handle errors properly.",
+        "regex": "try!",
+        "color": "#8B0000"
+    },
+    {
+        "name": "Empty Catch Blocks",
+        "description": "Do not leave catch blocks empty.",
+        "regex": "catch\\s*\\{\\s*\\}",
+        "color": "#556B2F"
+    },
+    {
+        "name": "Single Character Variable Names",
+        "description": "Variable names should be descriptive.",
+        "regex": "\\b(let|var)\\s+[a-zA-Z]\\b",
+        "color": "#CD5C5C"
+    },
+    {
+        "name": "Selector Usage",
+        "description": "Use `#selector` syntax instead of string literals for selectors.",
+        "regex": "Selector\\s*\\(\\s*\"[^\"]+\"\\s*\\)",
+        "color": "#00008B"
+    },
+    {
+        "name": "Typealias vs. Typedef",
+        "description": "Use `typealias` instead of `typedef`.",
+        "regex": "\\btypedef\\b",
+        "color": "#006400"
+    },
+    {
+        "name": "DispatchQueue.main.async",
+        "description": "Avoid direct usage; prefer abstractions.",
+        "regex": "DispatchQueue\\.main\\.async",
+        "color": "#8FBC8F"
+    },
+    {
+        "name": "Implicit Getters",
+        "description": "Omit `get` keyword in read-only computed properties.",
+        "regex": "var\\s+\\w+\\s*:\\s*\\w+\\s*\\{\\s*get\\s*\\{",
+        "color": "#483D8B"
+    },
+    {
+        "name": "Large Tuples",
+        "description": "Avoid tuples with more than two elements.",
+        "regex": "\\(\\s*\\w+\\s*,\\s*\\w+\\s*,\\s*\\w+[^)]*\\)",
+        "color": "#2F4F4F"
+    },
+    {
+        "name": "Explicit Type in Variables",
+        "description": "Omit type annotations when they can be inferred.",
+        "regex": "\\b(let|var)\\s+\\w+\\s*:\\s*[\\w<>\\[\\]]+",
+        "color": "#FF1493"
+    },
+    {
+        "name": "Empty Arrays and Dictionaries",
+        "description": "Use literal syntax `[]` and `[:]` for empty arrays and dictionaries.",
+        "regex": "=\\s*(Array|Dictionary)<[^>]*>\\(\\)",
+        "color": "#00BFFF"
+    },
+    {
+        "name": "Avoid ++ and -- Operators",
+        "description": "Avoid using `++` and `--` operators.",
+        "regex": "\\+\\+|\\-\\-",
+        "color": "#FFDAB9"
+    },
+    {
+        "name": "Avoid Objective-C Selectors",
+        "description": "Prefer Swift methods over Objective-C selectors.",
+        "regex": "\\bperformSelector\\b",
+        "color": "#B8860B"
+    },
+    {
+        "name": "Weak Self in Closures",
+        "description": "Capture `self` weakly to avoid retain cycles.",
+        "regex": "\\[\\s*weak\\s+self\\s*\\]",
+        "color": "#BC8F8F"
+    },
+    {
+        "name": "Prefer AnyObject over class in Protocols",
+        "description": "Use `AnyObject` instead of `class` for class-only protocols.",
+        "regex": "protocol\\s+\\w+:\\s*class",
+        "color": "#5F9EA0"
+    },
+    {
+        "name": "Avoid Floating-Point Equality",
+        "description": "Do not compare floating-point numbers for equality.",
+        "regex": "\\b\\d+\\.\\d+\\s*(==|!=)\\s*\\d+\\.\\d+\\b",
+        "color": "#D2B48C"
+    },
+    {
+        "name": "Avoid var Parameters in Functions",
+        "description": "Do not use `var` in function parameters.",
+        "regex": "func\\s+\\w+\\s*\\(.*\\bvar\\s+\\w+.*\\)",
+        "color": "#FA8072"
+    },
+    {
+        "name": "Prefer isEmpty over Comparing to Empty Collection",
+        "description": "Use `isEmpty` instead of comparing to `[]` or `\"\"`.",
+        "regex": "\\.\\s*count\\s*(==|!=)\\s*0",
+        "color": "#F4A460"
+    },
+    {
+        "name": "Avoid Force Unwrapping in Conditions",
+        "description": "Do not use force unwrapping in conditional statements.",
+        "regex": "if\\s+.*!\\s*=\\s*nil",
+        "color": "#708090"
+    },
+    {
+        "name": "Avoid Using NSObject",
+        "description": "Use Swift native classes when possible.",
+        "regex": ":\\s*NSObject\\b",
+        "color": "#9ACD32"
+    },
+    {
+        "name": "Use of fileprivate over private",
+        "description": "Use `fileprivate` when access is needed within the file.",
+        "regex": "\\bprivate\\s+",
+        "color": "#FF00FF"
+    },
+    {
+        "name": "Avoid Using self in Initializers",
+        "description": "Do not use `self` unnecessarily in initializers.",
+        "regex": "init\\s*\\(.*\\)\\s*\\{\\s*self\\.",
+        "color": "#4B0082"
+    },
+    {
+        "name": "Avoid Weak Self in Non-Escaping Closures",
+        "description": "Do not capture `self` weakly in non-escaping closures.",
+        "regex": "\\[\\s*weak\\s+self\\s*\\]",
+        "color": "#FFA500"
+    },
+    {
+        "name": "Avoid Using Floating-Point Equality",
+        "description": "Do not compare floating-point numbers for equality.",
+        "regex": "\\b\\d+\\.\\d+\\s*(==|!=)\\s*\\d+\\.\\d+\\b",
+        "color": "#000080"
+    }
+]
